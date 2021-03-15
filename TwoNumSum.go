@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func RunTwoNumSumSort() {
+func RunTwoNumSum() {
 	ar := []int{3, 5, -4, 8, 11, 1, -1, 6}
 	result := twoNumberSumSort(ar, 10)
 	resultMap := twoNumberSumMap(ar, 10)
