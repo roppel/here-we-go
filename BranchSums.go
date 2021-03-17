@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 func RunBranchSums() {
-	tree := NewBinaryTree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+	tree := newBinaryTree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 	sums := branchSums(tree)
 	fmt.Printf("%v\n", sums)
 }
 
-func NewBinaryTree(root int, values ...int) *BinaryTree {
+//from here until func branchSums() borrowed for easy test building
+func newBinaryTree(root int, values ...int) *BinaryTree {
 	tree := &BinaryTree{Value: root}
 	tree.Insert(values, 0)
 	return tree
