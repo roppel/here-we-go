@@ -8,12 +8,12 @@ func SortedSquares(array []int) []int {
 	ar := make([]int, pos+1)
 	left, right := 0, pos
 	for pos >= 0 {
-		leftVal, rightVal := math.Abs(float64(array[left])), math.Abs(float64(array[right]))
+		leftVal, rightVal := (int)(math.Abs(float64(array[left]))), (int)(math.Abs(float64(array[right])))
 		if leftVal > rightVal {
-			ar[pos] = int(leftVal * leftVal)
+			ar[pos] = leftVal * leftVal
 			left++
 		} else {
-			ar[pos] = int(rightVal * rightVal)
+			ar[pos] = rightVal * rightVal
 			right--
 		}
 		pos--
